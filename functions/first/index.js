@@ -7,6 +7,9 @@ exports.handler = async function(event, context) {
     // return some JSON data with a staus of 200
     return {
       statusCode: 200,
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         path,
         httpMethod,
