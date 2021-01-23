@@ -13,8 +13,9 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({
         path,
         httpMethod,
+        headers,
         queryStringParameters,
-        body
+        body: JSON.parse(body)
       })
     }
   }
